@@ -1,0 +1,60 @@
+Input Format
+
+input consists of integer
+Constraints
+
+No Constraints
+
+Output Format
+
+execute the statemene whether the given year is leap or not.
+Sample Input 0
+
+1900
+Sample Output 0
+
+The Given Year 1900 is Not a Leap Year.
+Sample Input 1
+
+2012
+Sample Output 1
+
+The Given Year 2012 is a Leap Year.
+Sample Input 2
+
+2015
+Sample Output 2
+
+The Given Year 2015 is Not a Leap Year.
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int y=sc.nextInt();
+        boolean l;
+        if(y%4==0){
+            if(y%100==0){
+                if(y%400==0){
+                    l=true;
+                }else{
+                    l=false;
+                }
+            }else{
+                l=true;
+            }
+        }else{
+            l=false;
+        }if(l){
+            System.out.println("The Given Year "+y+" is a Leap Year.");
+        }
+        else{
+            System.out.println("The Given Year " +y+ " is Not a Leap Year.");
+
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
